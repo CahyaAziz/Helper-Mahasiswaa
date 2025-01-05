@@ -4,14 +4,15 @@ import utils.helper as helper
 
 def display_timer_setup(username):
     helper.clear()
-    print("Tentukan waktu timer")
+    print("Tentukan waktu timer (Minimal 10 menit)")
     
     while True:
         try:
             while True:
                 jam = int(input("Jam: "))
-                menit = int(input("Menit (Minimal 10 menit): "))
-                if not (jam == 0) and (menit < 10):
+                menit = int(input("Menit: "))
+                total = (jam * 60) + menit
+                if total >= 10:
                     break
             
             jam += menit // 60
