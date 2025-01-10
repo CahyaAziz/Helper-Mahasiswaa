@@ -87,6 +87,7 @@ def countdown(seconds, pomodoro, username):
         helper.send_notification("⏰ Timer Belajar ⏰", "Timer Selesai!")
         save_timer(second_awal,username)
         time.sleep(5)
+        return
     save_timer(second_awal - seconds,username)
     return
 
